@@ -122,7 +122,7 @@ $(document).ready(function () {
 	                                '<div class="media">',
 	                                    '<a class="pull-left" href="#">',
 	                                        '<img class="media-object img-circle" src="assets/img/userImages/{{ATC_UserIcon}}.png" alt="man1" height="40" width="40" />',
-	                                    	'<p>{{userName}}</p>',
+	                                    	'<p style="text-align:center;">{{userName}}</p>',
 	                                    '</a>',
 	                                    '<div class="media-body" >{{userMessageBody}}',
 	                                       ' <br />',
