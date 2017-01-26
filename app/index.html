@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>ATC Chat App</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://cdn.pubnub.com/pubnub-3.16.5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <script src="index.js"></script>
+</head>
+<style type="text/css">
+    /*.overlay {
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 10;
+        width:100%;
+        height:100%;
+        opacity:1;
+        background: #e6e6e6;
+        display:block; ;
+    }
+    #chat-ui{
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 10;
+        width:100%;
+        height:100%;
+        opacity:1;
+        display:none;
+    }*/
+    #messageList-widget{
+        height: 440px;
+        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden; 
+    }
+    #onlineUser-widget{
+        height: 490px;
+        overflow: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden; 
+    }
+</style>
+<body style="font-family:Verdana">
+    <!-- <div class='overlay' id='auth-overlay'>
+        <div class="container" >
+            <div class="row " style="padding-top:40px;">
+                <h3 class="text-center" >ATC Chat App </h3>
+                <br /><br />
+                <div class="col-md-8">
+                    <form >
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="ATCUserName" placeholder="ATC User Name" />
+                            <br/>
+                            <select class="form-control" id="ATCcontrol">
+                                <option>Anchorage</option>
+                                <option>Vancouver</option>
+                                <option>Seattle</option>
+                                <option>Portland</option>
+                            </select>
+                            <br/>
+                            <input type="submit" id="ATClogin"  class="btn btn-primary" value="Login"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container" >
+        <div class="row " style="padding-top:10px;">
+            <img id="leave" height="30" width="30" class="pull-right" src="assets/img/close.png">
+        </div>
+        <div class="row " style="padding-top:20px;">    
+            <div class="col-md-8" >
+                <div class="panel panel-info" >
+                    <div class="panel-heading text-center" >
+                        ATC Chat App
+                    </div>
+                    <div class="panel-body" id="messageList-widget">
+                        <ul class="media-list" id="message-list"></ul>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMessage" placeholder="Enter Message" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" id="inputMessageSubmit" type="button">SEND</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" >
+                <div class="panel panel-primary" >
+                    <div class="panel-heading text-center">
+                       Online Users
+                    </div>
+                    <div class="panel-body" id="onlineUser-widget">
+                        <ul class="media-list" id="onlineUsers"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
