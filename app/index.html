@@ -29,17 +29,7 @@
         background-image: url('assets/world-map-bg.png');
         background-size: cover;
     }
-    /*
-    #chat-ui{
-        position: fixed;
-        top:0;
-        left:0;
-        z-index: 10;
-        width:100%;
-        height:100%;
-        opacity:1;
-        display:none;
-    }*/
+    
     #messageList-widget{
         height: 440px;
         overflow: scroll;
@@ -54,15 +44,15 @@
     }
 
     .btn-primary {
-    color: black;
-    background-color: #ceeae9;
-    border-color: #357ebd; 
-}
+        color: black;
+        background-color: #ceeae9;
+        border-color: #357ebd; 
+    }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-    color: white;
-    background-color: teal;
-    border-color: #285e8e; 
-}
+        color: white;
+        background-color: teal;
+        border-color: #285e8e; 
+    }
 
 </style>
 <body style="font-family:Verdana">
@@ -73,10 +63,10 @@
                 <div class="col-md-4 col-md-offset-4" style="text-align:center;">
                     <form >
                         <div class="form-group">
-                            <input type="text" class="form-control" id="ATCUserName" placeholder="ATC User Name" />
+                            <input type="text" class="form-control" id="ATCUserName" name="ATCUserName" placeholder="ATC User Name" required />
                             <br/>
                             
-                            <select class="form-control" id="ATCcontrol">
+                            <select class="form-control" id="ATCcontrol" required>
                                 <option selected disabled hidden>Select Your ATC Location</option>
                                 <option>Anchorage</option>
                                 <option>Vancouver</option>
@@ -98,8 +88,9 @@
         <div class="row " style="padding-top:20px;">    
             <div class="col-md-8" >
                 <div class="panel panel-info" >
-                    <div class="panel-heading text-center" >
-                        ATC Chat App
+                    <div class="panel-heading text-left" id="chat-header">ATC Chat App - 
+                        <span id="chat-header-username" class="panel-title text-left"> </span>
+                        <span id="chat-header-atcname" class="panel-title text-left "> </span>
                     </div>
                     <div class="panel-body" id="messageList-widget">
                         <ul class="media-list" id="message-list"></ul>
