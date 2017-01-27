@@ -9,9 +9,10 @@ $(document).ready(function () {
 	    messageList = $("#message-list"),
 	    onlineUsersList = $("#onlineUsers"),
 	    ATCUserName = $("#ATCUserName"),
-	    ATCcontrolname = $("#ATCcontrol"),
+	    ATCControlLoc = $("#ATCcontrol"),
 	    ATClogin = $("#ATClogin"),
 	    ATCleave = $("#leave"),
+	    LoginScreen = $(".overlay"),
 	    ATCuserlist = [];
 	
 	// var ATCusername = ATCUserName.val();
@@ -157,18 +158,28 @@ $(document).ready(function () {
 
 	// ATClogin.submit(function (event){
 	ATClogin.on( "click", function() {
-		var loginData = {"command":"join","user":ATCUserName.val(),"ATClocation":ATCcontrol.val()}
+		var loginData = {"command":"join","user":ATCUserName.val(),"ATClocation":ATCControlLoc.val()}
 			console.log(loginData)
         	pub_publish(loginData);
-        	// $('#auth-overlay').hide();
-        	// $('#auth-overlay').remove();
-        	// $('#app-ui').css('display','block');
+        	LoginScreen.fadeOut(1000);
+        	setTimeout(function(){
+        		LoginScreen.css("z-index","-10");
+        		ATCUserName.val(""),
+        		ATCControlLoc.val("Select Your ATC Location")
+
+        	},1000);
+        	
 	})
 
 	ATCleave.on( "click", function() {
-		var leaveData = {"command":"leave","user":ATCusername,"ATClocation":ATCctrlname};
+		var leaveData = {"command":"leave","user":ATCusername,"ATClocation":ATCControlLoc};
 			console.log(leaveData)
 		    pub_publish(leaveData);
+
+		    LoginScreen.css("z-index","10");
+		    LoginScreen.fadeIn(1000);
+        	
+        	
 		    // $('#app-ui').remove();
 		    // $('#auth-overlay').show();
 		    // $('#auth-overlay').css('display','block');

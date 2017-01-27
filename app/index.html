@@ -16,7 +16,7 @@
     <script src="index.js"></script>
 </head>
 <style type="text/css">
-    /*.overlay {
+    .overlay {
         position: fixed;
         top:0;
         left:0;
@@ -26,7 +26,10 @@
         opacity:1;
         background: #e6e6e6;
         display:block; ;
+        background-image: url('assets/world-map-bg.png');
+        background-size: cover;
     }
+    /*
     #chat-ui{
         position: fixed;
         top:0;
@@ -49,32 +52,45 @@
         overflow-y: scroll;
         overflow-x: hidden; 
     }
+
+    .btn-primary {
+    color: black;
+    background-color: #ceeae9;
+    border-color: #357ebd; 
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: white;
+    background-color: teal;
+    border-color: #285e8e; 
+}
+
 </style>
 <body style="font-family:Verdana">
-    <!-- <div class='overlay' id='auth-overlay'>
+    <div class='overlay' id='auth-overlay'>
+        <h1 class="text-center" >ATC Chat</h1>
         <div class="container" >
-            <div class="row " style="padding-top:40px;">
-                <h3 class="text-center" >ATC Chat App </h3>
-                <br /><br />
-                <div class="col-md-8">
+            <div class="row " style="padding-top:100px;">
+                <div class="col-md-4 col-md-offset-4" style="text-align:center;">
                     <form >
                         <div class="form-group">
                             <input type="text" class="form-control" id="ATCUserName" placeholder="ATC User Name" />
                             <br/>
+                            
                             <select class="form-control" id="ATCcontrol">
+                                <option selected disabled hidden>Select Your ATC Location</option>
                                 <option>Anchorage</option>
                                 <option>Vancouver</option>
                                 <option>Seattle</option>
                                 <option>Portland</option>
                             </select>
                             <br/>
-                            <input type="submit" id="ATClogin"  class="btn btn-primary" value="Login"/>
+                            <input type="button" id="ATClogin"  class="btn btn-primary btn-block" value="ENTER CHAT"/>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div> 
     <div class="container" >
         <div class="row " style="padding-top:10px;">
             <img id="leave" height="30" width="30" class="pull-right" src="assets/img/close.png">
