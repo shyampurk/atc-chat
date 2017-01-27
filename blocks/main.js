@@ -13,6 +13,9 @@ export default(request) =>{
 	var minute = 60*60*24; // In minutes
 	var diff_inminutes = null;
 
+	var username = '88e9ca57-09f6-471d-be6e-a75d9c3c8700';
+	var password = 'qTxtbhhxqA';
+
 	var joincommand = "join";
 	var leavecommand = "leave";
 	var messagecommand = "message";
@@ -62,7 +65,7 @@ export default(request) =>{
 		var longitude = Location_data[location]["longitude"]; //Extract Longitude from the locally stored Object.
 		
 		// URL for the weather API
-		const url = ('https://88e9ca57-09f6-471d-be6e-a75d9c3c8700:qTxtbhhxqA@twcservice.mybluemix.net:443/api/weather/v1/geocode/'+lattitude+'/'+longitude+'/observations.json?units=m&language=en-US');
+		const url = ('https://'+username+':'+password+'@twcservice.mybluemix.net:443/api/weather/v1/geocode/'+lattitude+'/'+longitude+'/observations.json?units=m&language=en-US');
 
 		// Making an external api call for the weather data 
 		xhr.fetch(url).then((url_fetched_data) =>{
