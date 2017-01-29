@@ -28,7 +28,8 @@ $(document).ready(function () {
 				"Mixed Rain & Hail":35,"Hot":36,"Isolated Thunderstorms":37,"Thunderstorms":38,
 				"Scattered Showers":39,"Heavy Rain":40,"Scattered Snow Showers":41,
 				"Heavy Snow":42,"Blizzard":43,"Not Available (N/A)":44,
-				"Scattered Showers":45,"Scattered Snow Showers":46,"Scattered Thunderstorms":47
+				"Scattered Showers":45,"Scattered Snow Showers":46,"Scattered Thunderstorms":47,
+				"Fair":26,"Fair / Windy":22
 			}
 			
 	var pubnub = PUBNUB({
