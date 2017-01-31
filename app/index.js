@@ -12,6 +12,8 @@ $(document).ready(function () {
 	    ATCleave = $("#leave"),
 	    LoginScreen = $(".overlay"),
 	    ATCuserlist = [],
+	    pub_key = 'pub-c-578b72c9-0ca2-4429-b7d4-313bbdf9b335',
+	    sub_key = 'sub-c-471f5e36-e1ef-11e6-ac69-0619f8945a4f',
 		ATCusername,
 		ATCctrlname;
 
@@ -33,8 +35,8 @@ $(document).ready(function () {
 			}
 			
 	var pubnub = PUBNUB({
-        publish_key : 'pub-c-578b72c9-0ca2-4429-b7d4-313bbdf9b335',
-        subscribe_key : 'sub-c-471f5e36-e1ef-11e6-ac69-0619f8945a4f'
+        publish_key : pub_key,
+        subscribe_key : sub_key
     })
 
 	function pub_subscribe(){
@@ -163,6 +165,15 @@ $(document).ready(function () {
 	                        '</li>'].join("\n");
 	        var list = Mustache.render(messageTemplate, messageData);
 	    	messageList.append(list);
+
+	    	var height = 0;
+			$('div li').each(function(i, value){
+			    height += parseInt($(this).height());
+			});
+
+			height += '';
+
+			$('div').animate({scrollTop: height});
 		
 		}else if(m.command == "leave"){
 
@@ -178,24 +189,29 @@ $(document).ready(function () {
 	        					"ATClocation":ATCctrlname,
 	        					"userMessage":inputMessage.val()
 	        				}
-	        inputMessage.val("");
-	        pub_publish(chatMessage);
+	        if(inputMessage.val().length != 0){
+	        	pub_publish(chatMessage);
+	        	inputMessage.val("");
+	        }
 	    });
 	};
 
 	ATClogin.on( "click", function() {
-		var loginData = {"command":"join","user":ATCUserName.val(),"ATClocation":ATCControlLoc.val()}
-			ATCusername = ATCUserName.val();
-			ATCctrlname = ATCControlLoc.val();
-        	pub_publish(loginData);
-        	LoginScreen.fadeOut(1000);
-        	setTimeout(function(){
-        		LoginScreen.css("z-index","-10");
-        		ATCUserName.val(""),
-        		ATCControlLoc.val("Select Your ATC Location")
-        	},1000);
+		pub_subscribe();
+		setTimeout(function(){
+			var loginData = {"command":"join","user":ATCUserName.val(),"ATClocation":ATCControlLoc.val()}
+				ATCusername = ATCUserName.val();
+				ATCctrlname = ATCControlLoc.val();
+	        	pub_publish(loginData);
+	        	LoginScreen.fadeOut(1000);
+	        	setTimeout(function(){
+	        		LoginScreen.css("z-index","-10");
+	        		ATCUserName.val(""),
+	        		ATCControlLoc.val("Select Your ATC Location")
+	        	},1000);
         	document.getElementById('chat-header-username').innerHTML = ATCusername;
         	document.getElementById('chat-header-atcname').innerHTML = " - ATC-"+ATCctrlname;
+		},1000);
 	});
 
 	ATCleave.on( "click", function() {
@@ -206,7 +222,9 @@ $(document).ready(function () {
 		    ATCuserlist.length = 0;
 		    LoginScreen.css("z-index","10");
 		    LoginScreen.fadeIn(1000);
-
+		    pubnub.unsubscribe({
+			    channel : chatSubscribeChannel,
+			});
 	});
 
 	function pub_publish(pub_msg){
@@ -220,7 +238,6 @@ $(document).ready(function () {
 	};
 	
 	send_message();
-	pub_subscribe();
 
 });
 
