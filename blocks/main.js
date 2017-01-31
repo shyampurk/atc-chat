@@ -111,7 +111,7 @@ export default(request) =>{
 	} // First condition Ending
 
 	/*
-		Third Condition
+		Second Condition
 		Command - message
 		Description - Handles the Messages of type message
 	*/
@@ -154,10 +154,10 @@ export default(request) =>{
 	        
 	            	
 	    }); // db call ending  
-	} // third command ending
+	} // Second command ending
 
 	/*
-		Second condition
+		Third condition
 		Command - Leave
 		Description - Handles the Messages of type Leave  
 	*/
@@ -165,6 +165,6 @@ export default(request) =>{
 		console.log("RECEIVED LEAVE COMMAND");
 		console.log("BROADCASTING MESSAGE -->",request.message);
 		broadcastMessage(pubchannel,request.message);
-	} // second condition ending
+	} // Third condition ending
 	return request.ok();
 };
