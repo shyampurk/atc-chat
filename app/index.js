@@ -178,6 +178,7 @@ $(document).ready(function () {
 	        					"ATClocation":ATCctrlname,
 	        					"userMessage":inputMessage.val()
 	        				}
+	        inputMessage.val("");
 	        pub_publish(chatMessage);
 	    });
 	};
