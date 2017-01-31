@@ -9,7 +9,7 @@ Step 2 : Click the "CREATE NEW APP" by giving a name to your APP.<br>
 Step 3 : Click on the newly created APP.
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step3.png)
          You can see the Demo keyset for the new application created.
-Step 4 : Click on the Demo keyset and click on the Blocks (on the left side).
+Step 4 : <br>Click on the Demo keyset and click on the Blocks (on the left side).
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step4.png)
 Step 5 : Create a new Block by giving the block name and description to the block.
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step5.png)
@@ -18,7 +18,7 @@ Step 6 : Create the Event Handler by clicking CREATE button at the bottom.
 Step 7 : Give the Name of the Event handler, Channel to communicate with the block and the option of when block <br>
          code should execute(Before of After publish of the message).
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step7.png)
-Step 8 : Click on the newly created block.
+Step 8 : Click on the newly created Event handler.
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step8.png)
 Step 9 : Copy the block code in the text area from here, and save it. 
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step9.png)
