@@ -6,7 +6,7 @@ Step 2 : Click the "CREATE NEW APP" by giving a name to your APP.<br>
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step1.png)
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step2.png)
          You can see the newly created APP in the page.<br>
-Step 3 : Click on the newly created APP.
+Step 3 : Click on the newly created APP.<br>
          You can see the Demo keyset for the new application created.
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step3.png)         
 Step 4 : Click on the Demo keyset and click on the Blocks (on the left side).
@@ -25,4 +25,5 @@ Step 9 : Copy the block code in the text area from here, and save it.
 Step 10 : Click on the Start block button(top right) to start the block.
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step10.png)
 
+Your block code is now running
 
