@@ -5,11 +5,11 @@ Step 1 : Login to the Pubnub account with the valid credentials.<br>
 Step 2 : Click the "CREATE NEW APP" by giving a name to your APP.<br>
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step1.png)
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step2.png)
-         <br>You can see the newly created APP in the page.
+         You can see the newly created APP in the page.<br>
 Step 3 : Click on the newly created APP.
-         ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step3.png)
          You can see the Demo keyset for the new application created.
-Step 4 : <br>Click on the Demo keyset and click on the Blocks (on the left side).
+         ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step3.png)         
+Step 4 : Click on the Demo keyset and click on the Blocks (on the left side).
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step4.png)
 Step 5 : Create a new Block by giving the block name and description to the block.
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step5.png)
