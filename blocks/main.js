@@ -8,7 +8,7 @@ export default(request) =>{
 	var url_fetched_data = null;
 	var fetched_message_body = null;
 	var database_value = null;
-	var TimeLimit = 2;
+	var TimeLimit = 15;
 	var weather_state = null;
 	var minute = 60*60*24; // In minutes
 	var diff_inminutes = null;
@@ -111,7 +111,7 @@ export default(request) =>{
 	} // First condition Ending
 
 	/*
-		Third Condition
+		Second Condition
 		Command - message
 		Description - Handles the Messages of type message
 	*/
@@ -154,10 +154,10 @@ export default(request) =>{
 	        
 	            	
 	    }); // db call ending  
-	} // third command ending
+	} // Second condition ending
 
 	/*
-		Second condition
+		Third condition
 		Command - Leave
 		Description - Handles the Messages of type Leave  
 	*/
@@ -165,6 +165,6 @@ export default(request) =>{
 		console.log("RECEIVED LEAVE COMMAND");
 		console.log("BROADCASTING MESSAGE -->",request.message);
 		broadcastMessage(pubchannel,request.message);
-	} // second condition ending
+	} // Third condition ending
 	return request.ok();
 };
