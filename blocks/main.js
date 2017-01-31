@@ -154,7 +154,7 @@ export default(request) =>{
 	        
 	            	
 	    }); // db call ending  
-	} // Second command ending
+	} // Second condition ending
 
 	/*
 		Third condition
