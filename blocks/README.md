@@ -20,9 +20,12 @@ Step 7 : Give the Name of the Event handler, Channel to communicate with the blo
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step7.png)
 Step 8 : Click on the newly created Event handler.
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step8.png)
-Step 9 : Copy the block code in the text area from [here](https://github.com/shyampurk/atc-chat/blob/master/blocks/main.js), and save it. 
+Step 9 : Copy the block code in the text area from [here](https://github.com/shyampurk/atc-chat/blob/master/blocks/main.js). 
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step9.png)
-Step 10 : Click on the Start block button(top right) to start the block.
+
+Step 10 : Update line 16 & 17 to set variable 'username' and 'password' to the username and password obtained after creating the Weather Company Data Service.  Save the block.
+
+Step 11 : Click on the Start block button(top right) to start the block.
          ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/pubnub_blocks/pb_atc_step10.png)
 
 Your block code is now running
