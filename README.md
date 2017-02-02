@@ -1,7 +1,11 @@
-# atc-chat
-A hypothetical use case of air traffic control chat app (ATC-Chat) that mashes up chat messages between ATC operators with real-time weather data. 
+# ATC Chat
+This respository is a hypothetical use case implementation of air traffic control chat app (ATC-Chat) that mashes up chat messages between ATC operators with real-time weather data. It is built using IBM Bluemix Weather COmpany API and PubNub BLOCKS.
 
-# Bluemix weather company data api 
+## Setup
+
+Setup Bluemix Weather Company Service and PubNub BLOCKS as follows
+
+### Bluemix weather company data api 
 Step 1 : Login to the Bluemix account with the valid credentials, and goto Catalog.
         ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/bluemix_weatherapi/b_atc_step1.png)
         
@@ -30,3 +34,7 @@ Step 8 : Under the Examples section you can see how to form the url with the<br>
         ![alt-tag](https://github.com/shyampurk/atc-chat/blob/master/screenshots/bluemix_weatherapi/b_atc_step8.png)
 
 You can try out the different options of the weather api.
+
+### PubNub Blocks
+
+Refer to this [README file](blocks/README.md)
