@@ -44,8 +44,11 @@ Refer to this [README file](blocks/README.md)
 Assuming that both the Weather Company Service and PubNub BLOCK are set up correctly and are running, make the following changes in the code.
 
 Step 1 - Clone this repository 
+
 Step 2 - Open [index.js](app/index.js) edit line 15 & 16 to replace the PubNub publish and subscribe keys with the ones that you used for provisioning the BLOCK.
+
 Step 3 - Open [index.html](app/index.html) in multiple web browsers and login with any user name and ATC location. 
+
 Step 4 - Send chat messages and witness how the messages sent from one window get displayed in other chat rooms with weather information from the senders ATC location.
 
 
