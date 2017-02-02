@@ -37,7 +37,7 @@ You can try out the different options of the weather api.
 
 ### PubNub Blocks
 
-Refer to this [README file](blocks/README.md)
+Refer to this [README file](blocks/README.md). Pay attention to Step 10 in block creation. This is where you will use the username and password from step 6 above.
 
 ## Execution
 
@@ -45,7 +45,7 @@ Assuming that both the Weather Company Service and PubNub BLOCK are set up corre
 
 Step 1 - Clone this repository 
 
-Step 2 - Open [index.js](app/index.js) edit line 15 & 16 to replace the PubNub publish and subscribe keys with the ones that you used for provisioning the BLOCK.
+Step 2 - Open [index.js](app/index.js) and edit line 15 & 16 to replace the PubNub publish and subscribe keys with the ones that you used for provisioning the BLOCK.
 
 Step 3 - Open [index.html](app/index.html) in multiple web browsers and login with any user name and ATC location. 
 
